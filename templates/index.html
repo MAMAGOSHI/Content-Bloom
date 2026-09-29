@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Content Bloom</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ============================= -->
+    <!-- NAVIGATION -->
+    <!-- ============================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            🌸 Content Bloom
+
+            <span>
+                Let your ideas bloom.
+            </span>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ============================= -->
+    <!-- HERO -->
+    <!-- ============================= -->
+
+    <section class="hero">
+
+        <div class="hero-flower">
+            🌷
+        </div>
+
+        <p class="eyebrow">
+            YOUR AI CONTENT STUDIO
+        </p>
+
+        <h1>
+            Turn your ideas into
+            <span>beautiful content.</span>
+        </h1>
+
+        <p class="hero-text">
+
+            From one little idea to content
+            that is ready to share, sell and inspire.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ============================= -->
+    <!-- MODE SELECTOR -->
+    <!-- ============================= -->
+
+    <section class="modes">
+
+        <h2>
+            What would you like to create?
+        </h2>
+
+
+        <div class="mode-grid">
+
+
+            <!-- TEXT -->
+
+            <div
+                class="mode-card active"
+                data-mode="text"
+            >
+
+                <div class="mode-icon">
+                    ✍🏽
+                </div>
+
+                <h3>
+                    Text
+                </h3>
+
+                <p>
+                    Captions, posts, scripts,
+                    emails and more.
+                </p>
+
+                <span class="status working">
+                    Ready to bloom
+                </span>
+
+            </div>
+
+
+
+            <!-- IMAGE -->
+
+            <div
+                class="mode-card"
+                data-mode="image"
+            >
+
+                <div class="mode-icon">
+                    🖼️
+                </div>
+
+                <h3>
+                    Image
+                </h3>
+
+                <p>
+                    Create beautiful visual
+                    concepts for your content.
+                </p>
+
+                <span class="status working">
+                    Ready to bloom
+                </span>
+
+            </div>
+
+
+
+            <!-- VIDEO -->
+
+            <div
+                class="mode-card coming-soon"
+                data-mode="video"
+            >
+
+                <div class="mode-icon">
+                    🎬
+                </div>
+
+                <h3>
+                    Video
+                </h3>
+
+                <p>
+                    Create short form video
+                    concepts and content.
+                </p>
+
+                <span class="status">
+                    Coming soon
+                </span>
+
+            </div>
+
+
+
+            <!-- VOICE -->
+
+            <div
+                class="mode-card coming-soon"
+                data-mode="voice"
+            >
+
+                <div class="mode-icon">
+                    🎙️
+                </div>
+
+                <h3>
+                    Voice
+                </h3>
+
+                <p>
+                    Create voiceovers
+                    and narration.
+                </p>
+
+                <span class="status">
+                    Coming soon
+                </span>
+
+            </div>
+
+
+
+            <!-- CAMPAIGN -->
+
+            <div
+                class="mode-card coming-soon"
+                data-mode="campaign"
+            >
+
+                <div class="mode-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Campaign
+                </h3>
+
+                <p>
+                    Turn one idea into a
+                    complete campaign.
+                </p>
+
+                <span class="status">
+                    Coming soon
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ============================= -->
+    <!-- TEXT STUDIO -->
+    <!-- ============================= -->
+
+    <section
+        class="studio"
+        id="textStudio"
+    >
+
+        <div class="studio-heading">
+
+            <span class="studio-label">
+                ✍🏽 TEXT STUDIO
+            </span>
+
+            <h2>
+                Let's make your idea bloom.
+            </h2>
+
+            <p>
+                Tell Content Bloom what you're thinking.
+                We'll help turn it into polished content.
+            </p>
+
+        </div>
+
+
+        <div class="studio-card">
+
+
+            <label for="topic">
+                🌱 Your idea
+            </label>
+
+            <p class="helper-text">
+                You don't need a perfect prompt.
+                Just give Content Bloom your idea.
+            </p>
+
+            <textarea
+                id="topic"
+                placeholder="Example: I want to promote my new skincare business..."
+            ></textarea>
+
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="contentType">
+                        What are we creating?
+                    </label>
+
+                    <select id="contentType">
+
+                        <option>
+                            Instagram Caption
+                        </option>
+
+                        <option>
+                            TikTok / Reel Script
+                        </option>
+
+                        <option>
+                            LinkedIn Post
+                        </option>
+
+                        <option>
+                            Facebook Post
+                        </option>
+
+                        <option>
+                            Marketing Email
+                        </option>
+
+                        <option>
+                            Product Description
+                        </option>
+
+                        <option>
+                            Content Ideas
+                        </option>
+
+                        <option>
+                            Hooks
+                        </option>
+
+                        <option>
+                            Blog Outline
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="platform">
+                        Platform
+                    </label>
+
+                    <select id="platform">
+
+                        <option>Instagram</option>
+                        <option>TikTok</option>
+                        <option>LinkedIn</option>
+                        <option>Facebook</option>
+                        <option>WhatsApp</option>
+                        <option>Email</option>
+                        <option>Blog</option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="audience">
+                        Target audience
+                    </label>
+
+                    <select id="audience">
+
+                        <option>
+                            General audience
+                        </option>
+
+                        <option>
+                            Young women
+                        </option>
+
+                        <option>
+                            Small business owners
+                        </option>
+
+                        <option>
+                            Students
+                        </option>
+
+                        <option>
+                            Job seekers
+                        </option>
+
+                        <option>
+                            Professionals
+                        </option>
+
+                        <option>
+                            Parents
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="tone">
+                        Tone
+                    </label>
+
+                    <select id="tone">
+
+                        <option>Warm</option>
+                        <option>Professional</option>
+                        <option>Funny</option>
+                        <option>Soft</option>
+                        <option>Confident</option>
+                        <option>Educational</option>
+                        <option>Luxury</option>
+                        <option>Inspirational</option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="goal">
+                        Goal
+                    </label>
+
+                    <select id="goal">
+
+                        <option>
+                            Increase engagement
+                        </option>
+
+                        <option>
+                            Educate
+                        </option>
+
+                        <option>
+                            Sell
+                        </option>
+
+                        <option>
+                            Tell a story
+                        </option>
+
+                        <option>
+                            Build personal brand
+                        </option>
+
+                        <option>
+                            Promote a product
+                        </option>
+
+                        <option>
+                            Generate leads
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="length">
+                        Length
+                    </label>
+
+                    <select id="length">
+
+                        <option>Short</option>
+                        <option selected>Medium</option>
+                        <option>Long</option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <button
+                id="generateButton"
+                class="generate-button"
+            >
+
+                ✨ Bloom my content
+
+            </button>
+
+
+
+            <div
+                id="loading"
+                class="loading hidden"
+            >
+
+                🌸 Growing your content...
+
+            </div>
+
+
+
+            <div
+                id="result-section"
+                class="result-section hidden"
+            >
+
+                <div class="result-header">
+
+                    <div>
+
+                        <span class="result-label">
+                            YOUR CREATION
+                        </span>
+
+                        <h3>
+                            Your content has bloomed 🌷
+                        </h3>
+
+                    </div>
+
+                    <button id="copyButton">
+                        Copy
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="result"
+                    class="result"
+                ></div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ============================= -->
+    <!-- IMAGE STUDIO -->
+    <!-- ============================= -->
+
+    <section
+        class="studio hidden"
+        id="imageStudio"
+    >
+
+        <div class="studio-heading">
+
+            <span class="studio-label">
+                🖼️ IMAGE STUDIO
+            </span>
+
+            <h2>
+                Bring your idea to life.
+            </h2>
+
+            <p>
+                Describe the visual you're imagining
+                and Content Bloom will shape it into
+                a professional image prompt.
+            </p>
+
+        </div>
+
+
+
+        <div class="studio-card">
+
+
+            <label for="imageIdea">
+                🌱 What should we create?
+            </label>
+
+            <p class="helper-text">
+                Describe your idea naturally.
+                Content Bloom will handle the prompt engineering.
+            </p>
+
+            <textarea
+                id="imageIdea"
+                placeholder="Example: A luxury skincare product photographed in a beautiful pink setting..."
+            ></textarea>
+
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="imageStyle">
+                        Visual style
+                    </label>
+
+                    <select id="imageStyle">
+
+                        <option>
+                            Editorial photography
+                        </option>
+
+                        <option>
+                            Luxury fashion
+                        </option>
+
+                        <option>
+                            Minimalist
+                        </option>
+
+                        <option>
+                            Soft and feminine
+                        </option>
+
+                        <option>
+                            Modern commercial
+                        </option>
+
+                        <option>
+                            Cinematic
+                        </option>
+
+                        <option>
+                            Illustration
+                        </option>
+
+                        <option>
+                            3D render
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="imageMood">
+                        Mood
+                    </label>
+
+                    <select id="imageMood">
+
+                        <option>Elegant</option>
+                        <option>Soft</option>
+                        <option>Luxury</option>
+                        <option>Joyful</option>
+                        <option>Confident</option>
+                        <option>Romantic</option>
+                        <option>Energetic</option>
+                        <option>Calm</option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="imageAudience">
+                        Target audience
+                    </label>
+
+                    <select id="imageAudience">
+
+                        <option>
+                            General audience
+                        </option>
+
+                        <option>
+                            Young women
+                        </option>
+
+                        <option>
+                            Small business owners
+                        </option>
+
+                        <option>
+                            Students
+                        </option>
+
+                        <option>
+                            Professionals
+                        </option>
+
+                        <option>
+                            Parents
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="imagePlatform">
+                        Where will you use it?
+                    </label>
+
+                    <select id="imagePlatform">
+
+                        <option>Instagram</option>
+                        <option>TikTok</option>
+                        <option>Facebook</option>
+                        <option>LinkedIn</option>
+                        <option>Website</option>
+                        <option>Advertisement</option>
+                        <option>Campaign</option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <button
+                id="generateImageButton"
+                class="generate-button"
+            >
+
+                🖼️ Create my visual
+
+            </button>
+
+
+
+            <div
+                id="imageLoading"
+                class="loading hidden"
+            >
+
+                🌸 Creating your visual concept...
+
+            </div>
+
+
+
+            <div
+                id="imagePromptResult"
+                class="result-section hidden"
+            >
+
+                <div class="result-header">
+
+                    <div>
+
+                        <span class="result-label">
+                            VISUAL PROMPT
+                        </span>
+
+                        <h3>
+                            Your visual concept 🌷
+                        </h3>
+
+                    </div>
+
+                    <button id="copyImagePrompt">
+                        Copy
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="imagePrompt"
+                    class="result"
+                ></div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+
+</body>
+
+</html>
